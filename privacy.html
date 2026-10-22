@@ -19,14 +19,19 @@
 <main>
   <p><a href="index.html">← Kabala</a></p>
   <h1>מדיניות פרטיות</h1>
-  <p class="muted">עודכן לאחרונה: 21 באוקטובר 2026</p>
+  <p class="muted">עודכן לאחרונה: 22 באוקטובר 2026</p>
 
   <p>Kabala היא אפליקציה למחשב שולחני שמוצאת קבלות וחשבוניות בתיבת ה-Gmail שלך ושומרת אותן כקבצי PDF במחשב שלך.
     המסמך הזה מסביר בשפה פשוטה אילו נתונים האפליקציה ניגשת אליהם, מה היא עושה איתם ומה נשמר.</p>
 
   <h2>מה אנחנו קוראים</h2>
   <ul>
-    <li>Kabala מבקש מגוגל הרשאה אחת בלבד: <code>gmail.readonly</code> (קריאה בלבד).</li>
+    <li>הגישה ל-Gmail היא לקריאה בלבד. אפשר להתחבר באחת משתי דרכים:
+      <ul>
+        <li><strong>התחברות עם Google:</strong> ההרשאות היחידות הן <code>gmail.readonly</code> (קריאה בלבד), ו-<code>openid</code> + <code>email</code> כדי לזהות את החשבון.</li>
+        <li><strong>סיסמת אפליקציה:</strong> חיבור ל-<code>imap.gmail.com</code> עם סיסמת אפליקציה שיצרת בחשבון Google. התיבה נפתחת במצב קריאה בלבד.</li>
+      </ul>
+    </li>
     <li>האפליקציה מחפשת מיילים שנראים כמו קבלה, חשבונית או אישור תשלום, וקוראת את הנושא, השולח, התאריך, הטקסט והנספחים (PDF) שלהם.</li>
     <li>Kabala לעולם לא שולחת, מוחקת, מעבירה, מסמנת או משנה מיילים.</li>
   </ul>
@@ -35,8 +40,15 @@
   <ul>
     <li>העיבוד מתבצע במחשב שלך. הקבלות נשמרות רק בתיקייה שבחרת במחשב.</li>
     <li>במחשב נשמר אינדקס מקומי (SQLite) עם הפרטים שחולצו: שם החברה, תאריך, סכום ונתיב הקובץ. תוכן המיילים עצמו לא נשמר באינדקס.</li>
-    <li>מפתח הגישה לחשבון גוגל נשמר מוצפן בכספת של מערכת ההפעלה (Windows Credential Manager / macOS Keychain).</li>
+    <li>מפתח הגישה לחשבון גוגל או סיסמת האפליקציה נשמרים מוצפנים בכספת של מערכת ההפעלה (Windows Credential Manager / macOS Keychain).</li>
     <li>אין לנו שרת שמקבל או שומר את המיילים שלך.</li>
+  </ul>
+
+  <h2>מנוי ותשלום</h2>
+  <ul>
+    <li>אם תשדרג ל-Pro, שרת המנויים של Kabala שומר את כתובת המייל שלך (מאומתת דרך התחברות Google), את סוג המנוי ואת היסטוריית התשלומים והחשבוניות.</li>
+    <li>התשלום עצמו מתבצע ב-PayPal. פרטי כרטיס האשראי או חשבון ה-PayPal שלך לעולם לא מגיעים אלינו.</li>
+    <li>שרת המנויים לא מקבל שום מידע מתיבת המייל שלך ולא מפתח גישה ל-Gmail.</li>
   </ul>
 
   <h2>מה נשלח החוצה</h2>
@@ -53,8 +65,9 @@
 
   <h2>שליטה ומחיקה</h2>
   <ul>
-    <li>בכל רגע אפשר ללחוץ באפליקציה על "נתק וחסל כל הנתונים": הגישה לחשבון מבוטלת אצל גוגל, ומפתח הגישה והאינדקס המקומי נמחקים. קבצי ה-PDF בתיקייה שלך נשארים בשליטתך.</li>
-    <li>אפשר גם לבטל את הגישה ישירות בחשבון גוגל: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+    <li>בכל רגע אפשר ללחוץ באפליקציה על "נתק ומחק את כל הנתונים": הגישה לחשבון מבוטלת אצל גוגל, ומפתח הגישה והאינדקס המקומי נמחקים. קבצי ה-PDF בתיקייה שלך נשארים בשליטתך.</li>
+    <li>אפשר גם לבטל את הגישה ישירות בחשבון גוגל: <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. סיסמת אפליקציה מבטלים ב-<a href="https://myaccount.google.com/apppasswords">myaccount.google.com/apppasswords</a>.</li>
+    <li>למחיקת פרטי המנוי מהשרת, כתוב לנו לכתובת שלמטה.</li>
   </ul>
 
   <h2>יצירת קשר</h2>
@@ -62,11 +75,16 @@
 
   <section class="en" lang="en">
     <h1>Privacy Policy</h1>
-    <p class="muted">Last updated: October 21, 2026</p>
+    <p class="muted">Last updated: October 22, 2026</p>
     <p>Kabala is a desktop app that finds receipts and invoices in your Gmail and saves them as PDF files on your computer.</p>
     <h2>What we access</h2>
     <ul>
-      <li>Kabala requests a single Google permission: <code>gmail.readonly</code>.</li>
+      <li>Gmail access is read-only, with one of two sign-in methods:
+        <ul>
+          <li><strong>Sign in with Google:</strong> the only scopes are <code>gmail.readonly</code>, plus <code>openid</code> and <code>email</code> to identify the account.</li>
+          <li><strong>App password:</strong> a connection to <code>imap.gmail.com</code> with an app password you create in your Google account. The mailbox is opened read-only.</li>
+        </ul>
+      </li>
       <li>It searches for emails that look like receipts, invoices or payment confirmations and reads their subject, sender, date, text and PDF attachments.</li>
       <li>Kabala never sends, deletes, moves, labels or modifies email.</li>
     </ul>
@@ -74,8 +92,14 @@
     <ul>
       <li>Processing happens on your computer. Receipts are saved only to the folder you choose.</li>
       <li>A local index (SQLite) stores extracted fields only: company, date, amount and file path. Email content is not stored in it.</li>
-      <li>Your Google access token is stored encrypted in your operating system's credential vault.</li>
+      <li>Your Google access token or app password is stored encrypted in your operating system's credential vault.</li>
       <li>We operate no server that receives or stores your email.</li>
+    </ul>
+    <h2>Subscription and payment</h2>
+    <ul>
+      <li>If you upgrade to Pro, the Kabala subscription server stores your email address (verified through Google sign-in), your plan, and your payment and invoice history.</li>
+      <li>Payment is processed by PayPal. Your card or PayPal account details never reach us.</li>
+      <li>The subscription server receives no mailbox data and no Gmail access token.</li>
     </ul>
     <h2>What leaves your computer</h2>
     <ul>
@@ -90,7 +114,8 @@
     <h2>Control and deletion</h2>
     <ul>
       <li>"Disconnect &amp; delete all data" in the app revokes Google access and deletes the token and local index. PDF files in your folder remain yours.</li>
-      <li>You can also revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+      <li>You can also revoke access at <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, and app passwords at <a href="https://myaccount.google.com/apppasswords">myaccount.google.com/apppasswords</a>.</li>
+      <li>To delete your subscription data from our server, email us at the address below.</li>
     </ul>
     <h2>Contact</h2>
     <p><a href="mailto:serewf191@gmail.com">serewf191@gmail.com</a></p>
